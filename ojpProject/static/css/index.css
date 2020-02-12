@@ -1,0 +1,22 @@
+#heading{
+    margin: auto;
+    margin-top: 20%;
+    width: 600px;
+    text-align: center;
+    padding: 5px 15px 5px 15px;
+    font-family: "Baskerville Old Face", sans-serif;
+    font-size: 40px;
+    background-color: #17A2B8;
+    color: white;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-shadow: 5px 15px 5px black;
+}
+@media only screen and (max-width: 520px) {
+    #heading{
+        width: 400px;
+        margin: auto;
+        margin-top: 40%;
+    }
+
+}

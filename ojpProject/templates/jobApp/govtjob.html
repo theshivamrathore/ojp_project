@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Govt Home</title>
+    <link rel="stylesheet" href="{% static 'css/govtjob.css' %}">
+    <script rel="script" src="{% static 'jquery/jquery-3.4.1.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'DataTables/datatables.min.css' %}">
+    <script rel="script" src="{% static 'DataTables/datatables.min.js' %}"></script>
+    {% include 'jobApp/navbar.html' %}
+</head>
+<script>
+    $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
+<body>
+    <div class="container">
+        <h3 class="heading">Government Jobs India 2020 | Latest Govt Vacancies</h3>
+        <p>If you are one of the contenders looking for <b>Government Jobs India 2020</b>? then we have bundled a lot of information related to latest <b>Govt Vacancies 2020</b> through this page. At present, a hefty number of candidates are in confusion about where to find accurate information related to <b>Govt Jobs In India 2020</b>. Nowadays many of the job searchers are showing their interest in <b>Government Jobs</b>. But it is very difficult one to get the job because many of the aspirants in the race to participate in the latest Recruitments. So we advise the candidates need to bookmark this page to get the further information.</p>
+    </div>
+
+    <div class="container">
+        <h3 class="heading">Education Wise Govt Jobs</h3>
+        <table class="table table-bordered table1">
+            <tbody>
+            <tr>
+                <td><a href="#">10th Pass Govt Jobs</a></td>
+                <td><a href="#">12th Pass Govt Jobs</a></td>
+            </tr><tr>
+                <td><a href="#">Degree Govt Jobs</a></td>
+                <td><a href="#">PG Govt Jobs</a></td>
+            </tr><tr>
+                <td><a href="#">Engineering Govt Jobs</a></td>
+                <td><a href="#">Nursing Govt Jobs</a></td>
+            </tr><tr>
+                <td><a href="#"> Diploma Govt Jobs</a></td>
+                <td><a href="#">ITI Pass Govt Jobs</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h3 class="heading">List Of Latest Govt Jobs</h3>
+
+        <table class="table table-bordered" id="myTable">
+            <thead>
+            <th>Company</th>
+            <th>Post Name</th>
+            <th>Education</th>
+            <th>Total Posts</th>
+            <th>Loaction</th>
+            <th>Last Date</th>
+            <th>Apply Online</th>
+            </thead>
+            <tbody>
+                {% if gdata %}
+                    {% for data in gdata %}
+                        <tr>
+                        <td id="td1">{{ data.company }}</td>
+                        <td> <strong>Post Name:&nbsp;&nbsp;&nbsp;</strong>{{ data.post_name }}</td>
+                        <td><strong>Education:&nbsp;&nbsp;&nbsp;</strong>{{ data.education }}</td>
+                        <td><strong>Total Post:&nbsp;&nbsp;&nbsp;</strong>{{ data.total_post }}</td>
+                        <td><strong>Location:&nbsp;&nbsp;&nbsp;</strong>{{ data.location }}</td>
+                        <td><strong>Last Date:&nbsp;&nbsp;&nbsp;</strong>{{ data.last_date }}</td>
+                        <td id="td7"><a href="#" class="btn btn-success btn1">Apply</a></td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <h5>No Data Found...!!</h5>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

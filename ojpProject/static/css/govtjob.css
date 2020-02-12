@@ -1,0 +1,45 @@
+
+.heading    {
+    font-size: 40px;
+    font-family: "Arial Narrow";
+    margin-bottom: 20px;
+    margin-top: 60px;
+}
+p   {
+    font-family: Arial;
+}
+
+td {
+    font-family: Arial;
+}
+
+@media only screen and (max-width: 520px) {
+
+    thead   {
+        display: none;
+    }
+    tbody   td{
+        display: block;
+        font-family: Arial;
+    }
+    #td1    {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bolder;
+        background-color:#CCCCCC;
+    }
+    #td7    {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .btn1 {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 520px) {
+    strong  {
+        display: none;
+    }
+
+}

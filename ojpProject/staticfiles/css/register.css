@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://biacon.net/wp-content/uploads/2019/02/registration-form-background-images-7.jpg");
+}
+.heading    {
+    font-family: Algerian,sans-serif;
+    margin-top: 10px;
+    font-size: 60px;
+}
+
+.form input  {
+    display: block;
+    margin: auto;
+    padding: 15px ;
+    margin-bottom: 5px;
+    width: 400px;
+    background: transparent;
+    border: 1px solid black;
+}
+::placeholder {
+    color: white;
+}
+
+.form text{
+    color: white;
+}
+input{
+    color: white;
+
+}
+@media only screen and (max-width: 520px){
+    body{
+        width: 100%;
+    }
+    .heading{
+        font-size: 20px;
+    }
+    .form {
+        text-align: center;
+        width: 100%;
+    }
+}
